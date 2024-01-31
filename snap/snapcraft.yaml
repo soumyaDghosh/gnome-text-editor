@@ -58,10 +58,7 @@ parts:
       patch -p1 < ${CRAFT_PROJECT_DIR}/font_dialog.patch
     build-packages:
       - libeditorconfig-dev
-      - libfreetype6
-    override-pull: |
-      craftctl default
-      craftctl set version=$(git describe --tags --abbrev=10)
+      - libfreetype6 
 
   libraries:
     after: [ gnome-text-editor ]
