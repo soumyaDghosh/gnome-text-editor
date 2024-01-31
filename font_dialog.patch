@@ -1,5 +1,5 @@
 diff --git a/meson.build b/meson.build
-index c58d821..f0e7774 100644
+index 69ffdfa..1533537 100644
 --- a/meson.build
 +++ b/meson.build
 @@ -31,7 +31,7 @@ if not get_option('buildtype').startswith('debug')
@@ -8,7 +8,7 @@ index c58d821..f0e7774 100644
  glib_req_version = '2.73'
 -gtk_req_version = '4.7'
 +gtk_req_version = '4.10'
- gtksourceview_req_version = '5.10.0'
+ gtksourceview_req_version = '5.5.0'
  enchant_req_version = '2.2.0'
  
 diff --git a/src/editor-preferences-font.c b/src/editor-preferences-font.c
