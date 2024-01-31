@@ -51,6 +51,11 @@ parts:
       - --buildtype=release
       - -Dbugreport_url=https://github.com/ubuntu/gnome-text-editor/issues
     parse-info: [usr/share/metainfo/org.gnome.TextEditor.appdata.xml]
+    override-pull: |
+      craftctl default
+      # https://gitlab.gnome.org/GNOME/gnome-text-editor/-/merge_requests/141
+      # until the PR is merged in upstream we can use this patch to fix #18
+      patch -p1 < ${CRAFT_PROJECT_DIR}/font_dialog.patch
     build-packages:
       - libeditorconfig-dev
       - libfreetype6
